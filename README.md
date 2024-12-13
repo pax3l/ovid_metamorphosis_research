@@ -5,11 +5,11 @@ This repository contains resources for analyzing mentions and roles of deities i
 
 ### Contents
 
-• Data: Structured XML-TEI files encoding mentions of deities and their narrative roles (e.g., protagonist, secondary character, agent of metamorphosis).
+• Data : Structured XML-TEI files encoding mentions of deities and their narrative roles (e.g., protagonist, secondary character, agent of metamorphosis).
 
-• Scripts: Analytical scripts in Python and/or R for extracting, processing, and visualizing data.
+• Scripts : Analytical scripts in R for extracting, processing, and visualizing data.
 
-• Documentation: Detailed instructions and metadata for using the datasets and scripts.
+• Documentation : Detailed instructions and metadata for using the datasets and scripts.
 
 • Outputs: Results of the analysis, including visualizations and reports.
 
