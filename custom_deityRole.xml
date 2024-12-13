@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ODD pour la balise deityRole</title>
+                <author>Axelle Penture</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>Non publié</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Basé sur TEI P5</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <schemaSpec ident="customTEI">
+                <namespace ident="custom" uri="http://www.tei-c.org/ns/1.0/custom"/>
+                <elementSpec ident="deityRole">
+                    <desc>Encodage des rôles des divinités dans les Métamorphoses</desc>
+                    <classes>
+                        <memberOf key="model.global"/>
+                    </classes>
+                    <content>
+                        <macroSpec ident="macro.phraseSeq"/>
+                    </content>
+                    <attList>
+                        <attDef ident="context">
+                            <datatype>
+                                <list>
+                                    <value>narrative</value>
+                                    <value>metamorphosis</value>
+                                </list>
+                            </datatype>
+                            <desc>Type de mention : 'narrative' pour toute mention dans une partie du texte non distinguée comme description de métamorphose; 'metamorphosis' pour toute mention dans une partie indiquée comme description de métamorphose selon le découpage réalisé au préalable</desc>
+                        </attDef>
+                        <attDef ident="role">
+                            <datatype>
+                                <list>
+                                    <value>actor</value>
+                                    <value>object</value>
+                                    <value>auto</value>
+                                </list>
+                            </datatype>
+                            <desc>Rôle dans une métamorphose : 'act' lorsque le personnage est acteur de métamorphsoe; 'obj' lorsque le personnage est objet; 'auto' lorsque le personnage est auteur de sa propre métamrophose</desc>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+            </schemaSpec>
+        </encodingDesc>
+    </teiHeader>
+</TEI>
