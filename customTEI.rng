@@ -14,6 +14,58 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.8.1/
            prefix="tei"
            uri="http://www.tei-c.org/ns/1.0"/>
    <start>
-      <empty/>
+       <element name="TEI">
+         <ref name="teiElements"/>
+      </element>
    </start>
+
+   <define name="teiElements">
+      <choice>
+         <element name="teiHeader">
+            <ref name="teiHeaderContent"/>
+         </element>
+         <element name="text">
+            <ref name="textContent"/>
+         </element>
+
+         <!-- Ajout de deityRole -->
+         <element name="deityRole">
+            <ref name="deityRoleContent"/>
+         </element>
+      </choice>
+   </define>
+
+   <!-- Contenu de deityRole -->
+   <define name="deityRole">
+      <choice>
+         <text/>
+         <element name="deity">
+            <text/>
+         </element>
+         <attribute name="deity">
+                  <value>MIN</value>
+                  <value>JUP</value>
+                  <value>JUN</value>
+                  <value>APL</value>
+                  <value>DIA</value>
+                  <value>VEN</value>
+                  <value>MAR</value>
+                  <value>MER</value>
+                  <value>NEP</value>
+                  <value>PLU</value>
+                  <value>BAC</value>
+                  <value>CER</value>
+                  <value>PRO</value>
+         </attribute>
+        <attribute name="context">
+            <value>narrative</value>
+            <value>metamorphosis</value>
+         </attribute>
+         <attribute name="role">
+            <value>act</value>
+            <value>obj</value>
+            <value>auto</value>
+         </attribute>
+      </choice>
+   </define>
 </grammar>
